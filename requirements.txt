@@ -1,0 +1,4 @@
+django
+mysqlclient
+BeautifulSoup4
+pytz
