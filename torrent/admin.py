@@ -3,4 +3,9 @@ from .models import Magnet
 
 # Register your models here.
 
-admin.site.register(Magnet)
+
+class MagnetAdmin(admin.ModelAdmin):
+    list_display = [f.name for f in Magnet._meta.fields]
+
+admin.site.register(Magnet, MagnetAdmin)
+
