@@ -34,7 +34,7 @@ def rss(request):
         '<description>RSS</description>'
 
     for magnet in latest_magnet_list:
-        magnet.title = re.sub(r'"', r"", magnet.title)
+        magnet.title = re.sub(r'["<>]', r"", magnet.title)
         rss_content += '<item>'
         rss_content += '<title>' + magnet.title + '</title>'
         rss_content += '<link>' + magnet.magnet + '</link>'
