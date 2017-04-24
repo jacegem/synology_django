@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^collect/$', views.collect, name='collect'),
     # ex: /torrent/rss/
     url(r'^rss/$', views.rss, name='rss'),
+    url(r'^rss1/$', views.rss1, name='rss1'),
 ]
